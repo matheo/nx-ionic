@@ -123,6 +123,124 @@
           }
         }
       }
+    },
+    "customer-mobile": {
+      "projectType": "application",
+      "root": "apps/customer/mobile",
+      "sourceRoot": "apps/customer/mobile/src",
+      "prefix": "cmob",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/customer/mobile",
+            "index": "apps/customer/mobile/src/index.html",
+            "main": "apps/customer/mobile/src/main.ts",
+            "polyfills": "apps/customer/mobile/src/polyfills.ts",
+            "tsConfig": "apps/customer/mobile/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/customer/mobile/src/favicon.ico",
+              "apps/customer/mobile/src/assets"
+            ],
+            "styles": ["apps/customer/mobile/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/customer/mobile/src/environments/environment.ts",
+                  "with": "apps/customer/mobile/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "customer-mobile:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "customer-mobile:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "customer-mobile:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/customer/mobile/tsconfig.app.json",
+              "apps/customer/mobile/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/customer/mobile/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/customer/mobile/jest.config.js",
+            "tsConfig": "apps/customer/mobile/tsconfig.spec.json",
+            "setupFile": "apps/customer/mobile/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "customer-mobile-e2e": {
+      "root": "apps/customer/mobile-e2e",
+      "sourceRoot": "apps/customer/mobile-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/customer/mobile-e2e/cypress.json",
+            "tsConfig": "apps/customer/mobile-e2e/tsconfig.e2e.json",
+            "devServerTarget": "customer-mobile:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "customer-mobile:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/customer/mobile-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/customer/mobile-e2e/**"]
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -135,6 +253,9 @@
     },
     "@nrwl/angular:library": {
       "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   },
   "defaultProject": "website"

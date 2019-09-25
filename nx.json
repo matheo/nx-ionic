@@ -13,6 +13,12 @@
     },
     "website": {
       "tags": []
+    },
+    "customer-mobile-e2e": {
+      "tags": []
+    },
+    "customer-mobile": {
+      "tags": ["mobile"]
     }
   }
 }
