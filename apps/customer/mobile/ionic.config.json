@@ -1,0 +1,6 @@
+{
+  "name": "Customer App",
+  "npmClient": "yarn",
+  "type": "angular",
+  "integrations": {}
+}

@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "defaultProject": "customer-mobile",
   "projects": {
     "website": {
       "projectType": "application",
@@ -257,6 +258,5 @@
     "@nrwl/angular:component": {
       "style": "scss"
     }
-  },
-  "defaultProject": "website"
+  }
 }

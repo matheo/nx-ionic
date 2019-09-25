@@ -1,0 +1,12 @@
+{
+  "defaultProject": "customer-mobile",
+  "projects": {
+    "customer-mobile": {
+      "name": "Customer App",
+      "npmClient": "yarn",
+      "root": "apps/customer/mobile",
+      "type": "angular",
+      "integrations": {}
+    }
+  }
+}
