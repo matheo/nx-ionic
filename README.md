@@ -28,4 +28,14 @@ If you use yarn be sure to set it as default with `ionic config set -g npmClient
 
 9. Run a live-reload dev-server with `yarn customer:mobile:run android`
 
+## Known Issues
+
+- `ng add @ionic/angular` doesn't update the correct project in the `angular.json`
+
+- DO NOT update the Android Graddle version even if Android Studio insists. Capacitor takes care of the working version.
+
+- Android Studio complaining about non-Gradle modules next to Android-Gradle modules:  
+  Close the IDE, delete the `.idea` directory, delete the all `.iml` files, run `<app>:mobile:cap open android` again.  
+  https://stackoverflow.com/a/53920901/885259
+
 Enjoy!
