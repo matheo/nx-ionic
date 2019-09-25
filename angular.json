@@ -24,46 +24,9 @@
             "aot": false,
             "assets": [
               "apps/website/src/favicon.ico",
-              "apps/website/src/assets",
-              {
-                "glob": "**/*.svg",
-                "input": "node_modules/ionicons/dist/ionicons/svg",
-                "output": "./svg"
-              }
+              "apps/website/src/assets"
             ],
-            "styles": [
-              "apps/website/src/styles.scss",
-              {
-                "input": "node_modules/@ionic/angular/css/normalize.css"
-              },
-              {
-                "input": "node_modules/@ionic/angular/css/structure.css"
-              },
-              {
-                "input": "node_modules/@ionic/angular/css/typography.css"
-              },
-              {
-                "input": "node_modules/@ionic/angular/css/core.css"
-              },
-              {
-                "input": "node_modules/@ionic/angular/css/padding.css"
-              },
-              {
-                "input": "node_modules/@ionic/angular/css/float-elements.css"
-              },
-              {
-                "input": "node_modules/@ionic/angular/css/text-alignment.css"
-              },
-              {
-                "input": "node_modules/@ionic/angular/css/text-transformation.css"
-              },
-              {
-                "input": "node_modules/@ionic/angular/css/flex-utils.css"
-              },
-              {
-                "input": "src/theme/variables.css"
-              }
-            ],
+            "styles": ["apps/website/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -195,7 +158,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/customer/mobile",
+            "outputPath": "apps/customer/mobile/www",
             "index": "apps/customer/mobile/src/index.html",
             "main": "apps/customer/mobile/src/main.ts",
             "polyfills": "apps/customer/mobile/src/polyfills.ts",
@@ -203,9 +166,46 @@
             "aot": false,
             "assets": [
               "apps/customer/mobile/src/favicon.ico",
-              "apps/customer/mobile/src/assets"
+              "apps/customer/mobile/src/assets",
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/ionicons/dist/ionicons/svg",
+                "output": "./svg"
+              }
             ],
-            "styles": ["apps/customer/mobile/src/styles.scss"],
+            "styles": [
+              "apps/customer/mobile/src/styles.scss",
+              {
+                "input": "node_modules/@ionic/angular/css/normalize.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/structure.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/typography.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/core.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/padding.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/float-elements.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/text-alignment.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/text-transformation.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/flex-utils.css"
+              },
+              {
+                "input": "apps/customer/mobile/src/theme/variables.scss"
+              }
+            ],
             "scripts": []
           },
           "configurations": {

@@ -6,7 +6,15 @@
 /out-tsc
 
 # dependencies
-/node_modules
+node_modules
+
+# mobile
+/apps/**/*/resources
+/apps/**/*/hooks
+/apps/**/*/plugins
+/apps/**/*/www
+/apps/**/*/android/app/src/main/assets/*
+!/apps/**/*/android/app/src/main/assets/.gitkeep
 
 # IDEs and editors
 /.idea
