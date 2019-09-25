@@ -1,7 +1,16 @@
 {
   "name": "@nx-ionic/customer",
   "version": "0.0.1",
-  "scripts": {},
+  "scripts": {
+    "plugin": "yarn add",
+    "postplugin": "npx cap sync",
+    "cap": "npx cap",
+    "cap:add": "npx cap add",
+    "cap:copy": "npx cap copy",
+    "cap:open": "npx cap open",
+    "cap:sync": "npx cap sync",
+    "cap:update": "npx cap update"
+  },
   "dependencies": {
     "@capacitor/core": "1.2.1"
   },
