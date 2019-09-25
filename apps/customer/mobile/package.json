@@ -2,6 +2,10 @@
   "name": "@nx-ionic/customer",
   "version": "0.0.1",
   "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@capacitor/core": "1.2.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "1.2.1"
+  }
 }

@@ -1,3 +1,6 @@
 {
-  "npmClient": "yarn"
+  "appId": "co.matheo.customer",
+  "appName": "Customer App",
+  "npmClient": "yarn",
+  "webDir": "www"
 }

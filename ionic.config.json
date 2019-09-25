@@ -6,7 +6,9 @@
       "npmClient": "yarn",
       "root": "apps/customer/mobile",
       "type": "angular",
-      "integrations": {}
+      "integrations": {
+        "capacitor": {}
+      }
     }
   }
 }
