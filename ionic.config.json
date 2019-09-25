@@ -7,7 +7,8 @@
       "root": "apps/customer/mobile",
       "type": "angular",
       "integrations": {
-        "capacitor": {}
+        "capacitor": {},
+        "cordova": {}
       }
     }
   }
