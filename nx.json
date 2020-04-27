@@ -9,16 +9,26 @@
   },
   "projects": {
     "website-e2e": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["website"]
     },
     "website": {
       "tags": []
     },
     "customer-mobile-e2e": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["customer-mobile"]
     },
     "customer-mobile": {
       "tags": ["mobile"]
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
     }
   }
 }
