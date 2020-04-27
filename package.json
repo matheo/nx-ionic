@@ -45,7 +45,7 @@
     "@ionic/angular": "^4.9.1",
     "@nrwl/angular": "8.5.1",
     "core-js": "^2.5.4",
-    "rxjs": "~6.5.3",
+    "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
     "zone.js": "^0.10.3"
   },
