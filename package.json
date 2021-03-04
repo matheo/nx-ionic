@@ -14,7 +14,7 @@
     "customer:mobile:cap": "cd apps/customer/mobile && yarn cap",
     "customer:mobile:run": "ionic capacitor run -l --consolelogs --address 0.0.0.0 --project customer-mobile",
     "customer:mobile:serve": "ionic serve --consolelogs --address 0.0.0.0 --project customer-mobile",
-    "customer:mobile:sync": "cd apps/customer/mobile && rimraf node_modules && yarn && yarn cap:sync",
+    "customer:mobile:sync": "cd apps/customer/mobile && rimraf node_modules yarn.lock && yarn && yarn cap:sync",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",
