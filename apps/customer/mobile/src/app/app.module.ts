@@ -9,7 +9,10 @@ import { IonicModule } from '@ionic/angular';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    RouterModule.forRoot([], {
+      initialNavigation: 'enabled',
+      relativeLinkResolution: 'legacy'
+    }),
     IonicModule.forRoot()
   ],
   providers: [],
