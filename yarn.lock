@@ -1263,7 +1263,7 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
-"@ionic/angular-toolkit@latest":
+"@ionic/angular-toolkit@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@ionic/angular-toolkit/-/angular-toolkit-3.1.0.tgz#ee932f4f69ac125d1448a0a9b281352d8a48a3d0"
   integrity sha512-qaNSFouUVM4TaGwiZMQNft13dFUkZpg2m/rKGVdBoajvTowXSM2sHUNoyzerDqjKZZdeD7mSn8J8bL40mUtyFQ==
@@ -1276,7 +1276,7 @@
     tslib "^2.0.3"
     ws "^7.0.1"
 
-"@ionic/angular@^5.0.7":
+"@ionic/angular@^5.6.0":
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/@ionic/angular/-/angular-5.6.0.tgz#dc208abe2b021df6ae384b1dba010d61425e679c"
   integrity sha512-1eRq9BpmrRQfSutgul8aDFQBePoKSMW4BIdE4RBo+9HwUCtnGhRYbK6FFYj/vBX0hdOhKb0i/JGWKpJQlYjDEg==

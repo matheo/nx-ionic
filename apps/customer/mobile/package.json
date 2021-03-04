@@ -12,10 +12,10 @@
     "cap:update": "npx cap update"
   },
   "dependencies": {
-    "@capacitor/android": "^1.2.1",
-    "@capacitor/core": "1.2.1"
+    "@capacitor/android": "^2.4.7",
+    "@capacitor/core": "^2.4.7"
   },
   "devDependencies": {
-    "@capacitor/cli": "1.2.1"
+    "@capacitor/cli": "^2.4.7"
   }
 }
