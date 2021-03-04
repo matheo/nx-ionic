@@ -26,7 +26,9 @@
               "apps/website/src/favicon.ico",
               "apps/website/src/assets"
             ],
-            "styles": ["apps/website/src/styles.scss"],
+            "styles": [
+              "apps/website/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -58,7 +60,10 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": [
+            "dist/apps/website"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -84,16 +89,20 @@
               "apps/website/tsconfig.app.json",
               "apps/website/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/website/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/website/**/*"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/website/jest.config.js",
-            "tsConfig": "apps/website/tsconfig.spec.json",
-            "setupFile": "apps/website/src/test-setup.ts"
-          }
+            "jestConfig": "apps/website/jest.config.js"
+          },
+          "outputs": [
+            "coverage/apps/website"
+          ]
         },
         "ionic-cordova-serve": {
           "builder": "@ionic/angular-toolkit:cordova-serve",
@@ -142,8 +151,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/website-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/website-e2e/**"]
+            "tsConfig": [
+              "apps/website-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/website-e2e/**/*"
+            ]
           }
         }
       }
@@ -246,7 +260,10 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": [
+            "apps/customer/mobile/www"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -272,16 +289,20 @@
               "apps/customer/mobile/tsconfig.app.json",
               "apps/customer/mobile/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/customer/mobile/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/customer/mobile/**/*"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/customer/mobile/jest.config.js",
-            "tsConfig": "apps/customer/mobile/tsconfig.spec.json",
-            "setupFile": "apps/customer/mobile/src/test-setup.ts"
-          }
+            "jestConfig": "apps/customer/mobile/jest.config.js"
+          },
+          "outputs": [
+            "coverage/apps/customer/mobile"
+          ]
         }
       }
     },
@@ -306,8 +327,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/customer/mobile-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/customer/mobile-e2e/**"]
+            "tsConfig": [
+              "apps/customer/mobile-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/customer/mobile-e2e/**/*"
+            ]
           }
         }
       }
